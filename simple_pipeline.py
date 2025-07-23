@@ -4,3 +4,4 @@ from sklearn.model_selection import train_test_split
 
 class SimpleMLPipeline:
     def __init__(self):
+        #STEP 1: Initialize the components of the pipeline
