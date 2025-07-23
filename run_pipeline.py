@@ -6,3 +6,11 @@ y = [[10,20,30,40,50,60]]
 # Split the dataset
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
+
+#Create and run the pipeline
+pipeline = simple_pipeline()
+pipeline.train(X_train, y_train)
+
+#Evaluate performance
+print("Train R² Score:", pipeline.evaluate(X_train, y_train))
+print("Train R² Score:", pipeline.evaluate(X_test, y_test))
