@@ -14,3 +14,13 @@ pipeline.train(X_train, y_train)
 #Evaluate performance
 print("Train R² Score:", pipeline.evaluate(X_train, y_train))
 print("Train R² Score:", pipeline.evaluate(X_test, y_test))
+
+#Predict on new data
+predictions = pipeline.predict(X_test)
+print("Predictions on test set:", predictions)
+
+
+# Print model parameters
+intercept, coef = pipeline.model_params()
+print("Model Intercept:", intercept)
+print("Model Coefficients:", coef)
